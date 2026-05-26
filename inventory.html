@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Tracking</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f4f7fb;
+            color: #172a45;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        header {
+            padding: 28px 20px;
+            background: linear-gradient(135deg, #0d6efd 0%, #198754 100%);
+            color: white;
+            border-radius: 22px;
+            box-shadow: 0 18px 40px rgba(13, 110, 253, 0.15);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(2rem, 3vw, 2.8rem);
+        }
+
+        p {
+            margin: 12px 0 0;
+            max-width: 760px;
+            opacity: 0.95;
+            line-height: 1.6;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            margin-top: 24px;
+            box-shadow: 0 14px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        th,
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e9edf3;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5fb;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        tbody tr:hover {
+            background: #f8fbff;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            margin-top: 18px;
+            font-size: 0.95rem;
+        }
+
+        a.back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #0d6efd;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a.back-link:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .section {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Inventory Tracking</h1>
+            <p>Warehouse inventory database with sample stock levels and storage details. This page shows how product and warehouse records can be organized in a tracking system.</p>
+            <span class="badge">Warehouse Database</span>
+            <br>
+            <a class="back-link" href="ui1.html">← Back to Dashboard</a>
+        </header>
+
+        <section class="section">
+            <h2>Warehouse Inventory Table</h2>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item ID</th>
+                            <th>Product Name</th>
+                            <th>Warehouse</th>
+                            <th>Quantity</th>
+                            <th>Reorder Level</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>WH-101</td>
+                            <td>Smart Sensor Unit</td>
+                            <td>East Warehouse</td>
+                            <td>84</td>
+                            <td>40</td>
+                            <td>Normal</td>
+                        </tr>
+                        <tr>
+                            <td>WH-203</td>
+                            <td>Logistics Software Kit</td>
+                            <td>North Depot</td>
+                            <td>27</td>
+                            <td>30</td>
+                            <td>Low Stock</td>
+                        </tr>
+                        <tr>
+                            <td>WH-310</td>
+                            <td>Packaging Crates</td>
+                            <td>Central Hub</td>
+                            <td>142</td>
+                            <td>100</td>
+                            <td>Normal</td>
+                        </tr>
+                        <tr>
+                            <td>WH-411</td>
+                            <td>RFID Tag Roll</td>
+                            <td>South Storage</td>
+                            <td>58</td>
+                            <td>50</td>
+                            <td>Reorder Soon</td>
+                        </tr>
+                        <tr>
+                            <td>WH-528</td>
+                            <td>Climate Control Unit</td>
+                            <td>East Warehouse</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>Low Stock</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

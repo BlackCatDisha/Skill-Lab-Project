@@ -1,95 +1,315 @@
 ```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Supply Chain and Logistics Monitoring System</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: #f4f7fb;
+            color: #172a45;
+        }
+
+        .container {
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 24px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0d6efd 0%, #198754 100%);
+            color: white;
+            border-radius: 0 0 24px 24px;
+            padding: 40px 28px;
+            box-shadow: 0 24px 80px rgba(13, 110, 253, 0.16);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: clamp(2rem, 3.2vw, 3rem);
+            line-height: 1.05;
+        }
+
+        header p {
+            margin: 18px 0 0;
+            max-width: 760px;
+            opacity: 0.92;
+            font-size: 1rem;
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.18);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            font-size: 0.95rem;
+        }
+
+        main {
+            margin-top: 32px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+        }
+
+        .section h2 {
+            margin-top: 0;
+            margin-bottom: 18px;
+            font-size: 1.5rem;
+        }
+
+        .feature-grid,
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+
+        .card,
+        .stat {
+            background: #f8fbff;
+            border: 1px solid #e4e9f2;
+            border-radius: 18px;
+            padding: 22px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover,
+        .stat:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+        }
+
+        .card h3,
+        .stat h3 {
+            margin: 0 0 10px;
+            font-size: 1.12rem;
+        }
+
+        .card p,
+        .stat span {
+            margin: 0;
+            color: #486581;
+            line-height: 1.6;
+            font-size: 0.98rem;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th,
+        td {
+            padding: 14px 16px;
+            border-bottom: 1px solid #e9edf3;
+            text-align: left;
+        }
+
+        th {
+            background: #f1f5fb;
+            color: #0f172a;
+            font-weight: 700;
+        }
+
+        ol {
+            padding-left: 1.2rem;
+            margin: 0;
+        }
+
+        ol li {
+            margin-bottom: 10px;
+            color: #475569;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #0f172a;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            border: 1px solid #d1d5db;
+            border-radius: 14px;
+            padding: 12px 14px;
+            font: inherit;
+            color: #0f172a;
+            background: #f8fafc;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
+        }
+
+        button {
+            padding: 14px 22px;
+            border: none;
+            border-radius: 14px;
+            background: #0d6efd;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            width: fit-content;
+        }
+
+        button:hover {
+            background: #0b5ed7;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            font-size: 0.95rem;
+            margin: 24px 0 0;
+        }
+
+        @media (max-width: 640px) {
+            header {
+                padding: 28px 20px;
+            }
+
+            .section {
+                padding: 22px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container">
+        <header>
+            <h1>Smart Supply Chain and Logistics Monitoring System</h1>
+            <p>Monitor inventory levels, shipment progress, warehouse health, and generate reports from a modern operational dashboard.</p>
+            <div class="badges">
+                <span class="badge">Inventory Tracking</span>
+                <span class="badge">Shipment Monitoring</span>
+                <span class="badge">Warehouse Management</span>
+                <span class="badge">Report Generation</span>
+                <span class="badge">Admin Dashboard</span>
+            </div>
+            <a class="badge" href="inventory.html" style="text-decoration:none; color: #fff; background: rgba(255,255,255,.16);">View Inventory Tracking</a>
+        </header>
 
-    <h1>Smart Supply Chain and Logistics Monitoring System</h1>
+        <main>
+            <section class="section">
+                <h2>System Overview</h2>
+                <div class="stats-grid">
+                    <div class="stat">
+                        <h3>Inventory</h3>
+                        <span>Track stock availability, reorder points, and product movement in real time.</span>
+                    </div>
+                    <div class="stat">
+                        <h3>Shipments</h3>
+                        <span>Monitor dispatch status, transit updates, and delivery performance.</span>
+                    </div>
+                    <div class="stat">
+                        <h3>Warehouse</h3>
+                        <span>Manage warehouse records, storage zones, and capacity utilization.</span>
+                    </div>
+                    <div class="stat">
+                        <h3>Reports</h3>
+                        <span>Generate actionable logistics reports for operations and planning.</span>
+                    </div>
+                    <div class="stat">
+                        <h3>Admin</h3>
+                        <span>Control user roles, permissions, and system settings centrally.</span>
+                    </div>
+                </div>
+            </section>
 
-    <p>
-        A simple web application for tracking product movement and warehouse operations.
-    </p>
+            <section class="section">
+                <h2>Core Features</h2>
+                <div class="feature-grid">
+                    <div class="card">
+                        <h3>Inventory Tracking</h3>
+                        <p>View stock availability, low-stock alerts, and batch details for every product.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Shipment Monitoring</h3>
+                        <p>Track shipments across locations and see delivery status with ease.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Warehouse Database</h3>
+                        <p>Keep warehouse data organized with searchable product and storage records.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Report Generation</h3>
+                        <p>Create inventory and logistics reports for operational audits and forecasts.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Admin Dashboard</h3>
+                        <p>Manage system workflows, approvals, and administrative controls from one screen.</p>
+                    </div>
+                </div>
+            </section>
 
-    <hr>
+            <section class="section">
+                <h2>Future Scope</h2>
+                <ol>
+                    <li>GPS shipment tracking for real-time location visibility.</li>
+                    <li>AI logistics optimization for route and capacity planning.</li>
+                    <li>Demand forecasting analytics to reduce stockouts and waste.</li>
+                </ol>
+            </section>
 
-    <h2>Initial Requirements</h2>
+            <section class="section">
+                <h2>Contact</h2>
+                <form class="form-grid">
+                    <div>
+                        <label for="name">Name</label>
+                        <input id="name" type="text" placeholder="Your name">
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input id="email" type="email" placeholder="you@example.com">
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell us how we can help"></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </section>
+        </main>
 
-    <ul>
-        <li>Inventory Tracking</li>
-        <li>Shipment Monitoring</li>
-        <li>Warehouse Database Management</li>
-        <li>Report Generation</li>
-        <li>Admin Dashboard</li>
-    </ul>
-
-    <hr>
-
-    <h2>System Modules</h2>
-
-    <table border="1" cellpadding="10">
-
-        <tr>
-            <th>Module</th>
-            <th>Description</th>
-        </tr>
-
-        <tr>
-            <td>Inventory</td>
-            <td>Tracks available products and stock levels</td>
-        </tr>
-
-        <tr>
-            <td>Shipment</td>
-            <td>Monitors shipment movement and delivery</td>
-        </tr>
-
-        <tr>
-            <td>Warehouse</td>
-            <td>Stores warehouse product records</td>
-        </tr>
-
-        <tr>
-            <td>Reports</td>
-            <td>Generates logistics and inventory reports</td>
-        </tr>
-
-        <tr>
-            <td>Admin</td>
-            <td>Controls and manages the system</td>
-        </tr>
-
-    </table>
-
-    <hr>
-
-    <h2>Future Scope</h2>
-
-    <ol>
-        <li>GPS Shipment Tracking</li>
-        <li>AI Logistics Optimization</li>
-        <li>Demand Forecasting Analytics</li>
-    </ol>
-
-    <hr>
-
-    <h3>Contact</h3>
-
-    <form>
-        <label>Name:</label><br>
-        <input type="text"><br><br>
-
-        <label>Email:</label><br>
-        <input type="email"><br><br>
-
-        <label>Message:</label><br>
-        <textarea rows="4" cols="30"></textarea><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
-
+        <footer>
+            Designed for smarter supply-chain operations and logistics monitoring.
+        </footer>
+    </div>
 </body>
 </html>
 ```
